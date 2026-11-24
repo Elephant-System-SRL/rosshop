@@ -1,0 +1,16 @@
+{
+  "name": "educat-it-routeros-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/dev.mjs",
+    "build": "node tools/build.mjs",
+    "test": "node tools/api-check.mjs",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "main": "app.js"
+}
