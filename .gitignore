@@ -169,3 +169,13 @@ themes/default-bootstrap/modules/*/mails/*
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+
+# RouterOS store
+dist/
+.local/
+.env
+.env.*
+!.env.example
+node_modules/
+*.sqlite*
+.DS_Store
