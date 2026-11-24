@@ -10,8 +10,8 @@ const commerce = new Set(["shop", "cart", "checkout", "account", "dashboard"]);
 const app = document.getElementById("app");
 
 function brand() {
-  return '<a class="brand" href="' + path() + '"><span class="brand-mark">' + icon("book") +
-    '</span><span>Educat <b>IT</b></span></a>';
+  return '<a class="brand" href="' + path() + '"><img class="brand-mark" src="/educat-it-header.png" width="38" height="38" alt="">' +
+    '<span>Educat <b>IT</b></span></a>';
 }
 
 function switchLanguage() {
