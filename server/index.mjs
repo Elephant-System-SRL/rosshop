@@ -1,3 +1,4 @@
+import { readBrandAsset } from "./brand.mjs";
 import { handleApi } from "./api.mjs";
 import { configuredOrigin } from "./core.mjs";
 
@@ -159,7 +160,7 @@ export function createWorker(readAsset, { preview = false } = {}) {
 
         const route = documentRoute(path);
         const indexingHeaders = origin && route?.indexable ? {} : { "X-Robots-Tag": "noindex, nofollow" };
-        const asset = await readAsset(route ? "/index.html" : path);
+        const asset = readBrandAsset(path) ?? await readAsset(route ? "/index.html" : path);
         if (!asset) {
           return addResponseHeaders(new Response(head ? null : "Page not found", { status: 404 }), {
             ...securityHeaders,
